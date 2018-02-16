@@ -1,0 +1,220 @@
+body {
+
+    background-color: grey;
+
+}
+
+#mainContainer {
+
+    text-align: center;
+    margin-top: 50px;
+    width: 500px;
+    height: 800px;
+
+}
+
+h2 {
+
+    color: white;
+    letter-spacing: 6px;
+    padding-left: 12px;
+    font-weight: 700;
+
+}
+
+#restartGame {
+    margin-right: 20px;
+    margin-left: 2px;
+}
+
+h4 {
+
+    padding-top: 10px;
+    padding-left: 3px;
+
+}
+
+#title {
+    padding-right: 220px;
+    padding-bottom: 0;
+    margin-bottom: -10px;
+}
+
+#gameContainer {
+
+    margin-top: 20px;
+
+}
+
+#answerBoard {
+
+    background-color: darkgrey;
+    width: 250px;
+    height: 75px;
+    border-bottom: 4px grey solid;
+
+}
+
+#guessBoard {
+
+    background-color: darkgrey;
+    width: 250px;
+    height: 500px;
+    float: left;
+
+
+}
+
+#hintBoard {
+
+    background-color: darkgrey;
+    width: 70px;
+    height: 500px;
+    float: left;
+    margin-left: 10px;
+
+}
+
+.guessRow,
+.answerRow,
+.optionRow {
+
+    margin-left: 5px;
+    padding-top: 5px;
+
+}
+
+.input,
+.option {
+
+    background-color: dimgray;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    float: left;
+    margin: 5px 5px;
+
+}
+
+.option {
+    border: none;
+}
+
+.option:focus,
+.option:active {
+    
+    outline: none !important;
+    box-shadow: none !important;
+    
+}
+
+.option:hover {
+    cursor: pointer;
+}
+
+.circleAnswer {
+
+    background-color: dimgray;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+    float: left;
+    margin: 5px 5px;
+    color: white;
+
+}
+
+.hintCircle {
+
+    background-color: dimgray;
+    height: 12px;
+    width: 12px;
+    border-radius: 6px;
+    float: left;
+    margin-left: 6px;
+    margin-top: 6px;
+
+}
+
+/*if player gets a hit*/
+
+.hit {
+    background-color: red !important;
+}
+
+/*if player get an almost*/
+
+.almost {
+    background-color: white !important;
+}
+
+
+.hintBox {
+
+    width: 40px;
+    margin-left: 14px;
+    margin-top: 14px;
+    position: relative;
+    padding-bottom: 46px;
+
+}
+
+#optionContainer {
+
+    background-color: grey;
+    height: 75px;
+    float: left;
+    padding-top: 5px;
+
+}
+
+#delete {
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+
+/*Colours*/
+
+.red {
+
+    background-color: red !important;
+
+}
+
+.blue {
+
+    background-color: blue !important;
+
+}
+
+.yellow {
+
+    background-color: yellow !important;
+
+}
+
+.green {
+
+    background-color: green !important;
+
+}
+
+.orange {
+
+    background-color: orange !important;
+
+}
+
+.purple {
+
+    background-color: purple !important;
+
+}
+
+.peg {
+
+    -webkit-animation: bounceIn .4s;
+    -o-animation: bounceIn .4s;
+    animation: bounceIn .4s;
+}

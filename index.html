@@ -1,0 +1,340 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <!--Font Awesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+
+    <title>Mastermind</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+    <div id="mainContainer" class="container">
+
+        <div id="title">
+
+            <h2>Mastermind</h2>
+
+            <button type="button" class="btn btn-secondary" id="restartGame">Restart</button>
+
+            <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#myModal">Game Rules</button>
+
+        </div>
+
+        <div id="gameContainer">
+
+
+            <div id="answerBoard">
+
+                <div class="answerRow">
+
+                    <div class="circleAnswer input">
+                        <h4>?</h4>
+                    </div>
+
+                    <div class="circleAnswer input">
+                        <h4>?</h4>
+                    </div>
+
+                    <div class="circleAnswer input">
+                        <h4>?</h4>
+                    </div>
+
+                    <div class="circleAnswer input">
+                        <h4>?</h4>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div id="guessBoard">
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+                <div class="guessRow">
+
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+                    <div class="input"></div>
+
+                </div>
+
+
+
+            </div>
+
+            <div id="hintBoard">
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+                <div class="hintBox">
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                    <div class="hintRow">
+                        <div class="hintCircle js-hintCircle"></div>
+                        <div class="hintCircle js-hintCircle"></div>
+                    </div>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <div id="optionContainer">
+
+            <div class="optionRow">
+
+                <button type="button" value="1" id="red" class="option red"></button>
+
+                <button value="2" id="blue" class="option blue"></button>
+
+                <button value="3" id="yellow" class="option yellow"></button>
+
+                <button value="4" id="green" class="option green"></button>
+
+                <button value="5" id="orange" class="option orange"></button>
+
+                <button value="6" id="purple" class="option purple"></button>
+
+                <button class="btn btn-secondary" id="delete"><i class="fas fa-arrow-left fa-lg"></i></button>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+    <!--    Modal for when player has won/lost the game-->
+    <div>
+        <div id="my-modal" class="modal fade">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body" id="modalMessage">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" id="playAgain">Play again?</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Modal for rules of the game-->
+    <div>
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">How to play Mastermind</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+                    </div>
+                    <div class="modal-body">
+                        <h6>Object of the Game</h6>
+                        <p><small>In this version of Mastermind, the computer will be the codemaker and you will be the codebreaker. The computer picks a random sequence of 4 pegs.
+                        The object of the game is to guess the exact positions of the colors in the computer's sequence in as few guesses as possible. After each guess, the computer gives you a score of exact and partial matches.</small></p>
+                        <h5>Rules</h5>
+                        <ol>
+                            <small><li>The sequence can contain pegs of colors: red, blue, yellow, green, orange, purple.</li></small>
+                            <small><li>A color can be used any number of times in the sequence.</li></small>
+                            <small><li>All four pegs of the secret sequence will contain a color - no blanks/empties are allowed.</li></small>
+                            <small><li>Each guess must consist of 4 peg colors - no blanks.</li></small>
+                            <small><li>You have 8 guesses to find the secret sequence.</li></small>
+                            <small><li>At the end of each guess, for every peg of correct color in the correct position you will get a red dot.</li></small>
+                            <small><li>At the end of each guess, for every peg of correct color in the wrong position you will get a white dot.</li></small>
+                        </ol>
+                        <p>
+
+
+
+                        </p>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
